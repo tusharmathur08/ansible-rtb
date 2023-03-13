@@ -1,0 +1,17 @@
+---
+  - name: Install and configure tomcat
+    hosts: servers 
+    gather_facts: true
+    become: yes
+    vars:
+      req_tomcat_ver: hostname {{ tomcatversion }}
+      req_port: 
+      tomcat_url: https://archive.apache.org/dist/tomcat/tomcat-{{req_tomcat_ver.split('.')[0]}}/v{{req_tomcat_ver}}/bin/apache-tomcat-{{req_tomcat_ver}}.tar.gz
+      tasks:
+      - name: updating repos
+        apt:
+          update_cache: yes
+          cache_valid_time: 3600
+
+      - name: intsalling java
+        apt: name=default-jdk state=latest

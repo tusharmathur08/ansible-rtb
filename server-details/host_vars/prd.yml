@@ -1,0 +1,6 @@
+---
+hostname:
+  name: prod
+ansible_host: 10.0.0.7
+tomcatversion: 8.5.0
+tomcatport: 80

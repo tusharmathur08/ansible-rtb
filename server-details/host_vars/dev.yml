@@ -1,0 +1,6 @@
+---
+hostname:
+  name: dev
+ansible_host: 10.0.0.12
+tomcatversion: 8.5.0
+tomcatport: 8877

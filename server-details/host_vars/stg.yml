@@ -1,0 +1,6 @@
+---
+hostname:
+  name: stage
+ansible_host: 10.0.0.10
+tomcatversion: 8.5.0
+tomcatport: 7078
